@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ETCH-A-SKETCH</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="header">
+            <p><img class="img" alt="logo" src="icons/logo.png" width="175" height="100"></img></p>
+        </div>
+        <div class="main">
+            
+            
+            <div class="controls">
+
+                <div class="color-card">
+                    <div class="color-box">
+                        <input type="color" id="color-select"> 
+                    </div>
+                    <span><img class="img" alt="paint-brush" src="icons/pencil.png" width="35" height="35"></img></span>
+                </div>
+                <div class="color-card cc2">
+                    <div class="color-box">
+                        <input type="color" id="bg-color-select" value="#ffffff">
+
+                    </div>
+                    <span><img class="img" alt="canvas" src="icons/canvas.png" width="35" height="35"></img></span>
+                </div>
+
+                <input type="image" id="color-fill" alt="color-fill" src="icons/paint-bucket.png" width="40" height="40">
+
+                <input type="image" id="color-grabber" alt="color-grabber" src="icons/dropper.png" width="40" height="40">
+                
+                <input type="image" id="eraser-btn" alt="eraser-btn" src="icons/eraser-tool-for-school.png" width="40" height="40">
+                
+                <input type="image" id="rainbow-btn" alt="rainbow-btn" src="icons/palette.png" width="40" height="40"> 
+                
+                <input type="image" id="shader-btn" alt="shader-btn" src="icons/shadow.png" width="40" height="40">
+                
+                <input type="image" id="lighten-btn" alt="lighten-btn" src="icons/shadow-2.png" width="40" height="40">
+                
+                
+                
+                
+                <div class="slider-box">
+                    <input type="range" value="24" min="1" max="60" id="range-slider"
+                    onmousemove="rangeSliderValue(this.value)" onChange="rangeSlider(this.value)">
+                    <div id="progress-bar"></div>
+                </div>
+                
+
+                <p class="grid-size"><span id="range-value">24</span> * <span id="range-value">24</span></p>
+
+                <input type="image" id="grid-btn" alt="grid-btn" src="icons/grid.png" width="40" height="40">
+                <input type="image" id="clear-grid" alt="grid-btn" src="icons/delete.png" width="40" height="40">
+
+            </div>
+            <div class="grid-wrapper">
+                <div class="grid-container toggle-grid" draggable="false"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
